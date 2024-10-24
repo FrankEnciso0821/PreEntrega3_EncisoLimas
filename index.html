@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Inscripción en Cursos</title>
+    <style>
+        body {
+            text-align: center;  
+            font-family: Arial, sans-serif;  
+            margin: 0;  
+            padding: 2rem;  
+        }
+    
+        h1 {
+            margin-bottom: 1.5rem; 
+        }
+    
+        h2 {
+            margin: 1.5rem 0;  
+        }
+    
+        ul {
+            list-style-type: none;  
+            padding: 0; 
+            margin: 1rem 0; 
+        }
+    
+        li {
+            margin: 0.5rem 0;  
+        }
+    
+        input {
+            margin: 0.5rem;  
+            padding: 0.5rem; 
+            width: 80%; 
+            max-width: 300px;  
+            font-size: 1rem; 
+        }
+    
+        button {
+            margin: 0.5rem;  
+            padding: 0.5rem 1rem;  
+            font-size: 1rem;  
+            cursor: pointer; 
+            background-color: #4CAF50;  
+            color: white;  
+            border: none;  
+            border-radius: 0.25rem; 
+        }
+    
+        button:hover {
+            background-color: #45a049;  
+        }
+        </style> 
+</head>
+<body>
+    <h1>Simulador de Inscripción en Cursos</h1>
+
+    <h2>Cursos Disponibles</h2>
+    <ul>
+    <li>Diseño UX/UI</li>
+    <li>Desarrollo Web</li>
+    <li>Data Analytics</li>
+    <li>Product Manager</li>
+    <li>Ciberseguridad</li>
+    </ul>
+
+    <h2>Formulario de Inscripción</h2>
+    <input type="text" id="nombre" placeholder="Tu nombre">
+    <input type="text" id="curso" placeholder="Curso a inscribir">
+    <button onclick="inscribirse()">Inscribirse</button>
+
+    <h2>Buscar Inscripciones</h2>
+    <input type="text" id="buscarAlumno" placeholder="Nombre del alumno">
+    <button onclick="buscarAlumno(document.getElementById('buscarAlumno').value)">
+    Buscar
+    </button>
+
+    <script src="inscripcion.js"></script>
+</body>
+</html>
