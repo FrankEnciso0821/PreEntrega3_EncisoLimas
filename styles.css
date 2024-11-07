@@ -1,0 +1,95 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 2rem;
+    background: linear-gradient(135deg, #a489e1, #d92955, rgb(188, 68, 176));
+    color: #333;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 1rem 0;
+    text-align: left;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+li {
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 0.8rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+li:hover {
+    background-color: #f9f9f9;
+    transform: translateY(-2px);
+}
+
+.input-form {
+    padding: 0.8rem;
+    width: 80%;
+    max-width: 300px;
+    font-size: 1rem;
+    border: 2px solid #4CAF50;
+    border-radius: 0.25rem;
+    margin: 0.5rem 0;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-form:focus {
+    border-color: #45a049;
+    box-shadow: 0 0 8px rgba(72, 169, 72, 0.7);
+}
+
+.btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+#notificacion {
+    display: none;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 1rem;
+    border-radius: 8px;
+    max-width: 500px;
+    margin: 1rem auto;
+    text-align: center;
+}
+
+#resultadoBusqueda {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.form-group {
+    margin: 1rem 0;
+    text-align: left;
+    max-width: 300px;
+    margin: 0.5rem auto;
+}
