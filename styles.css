@@ -19,6 +19,7 @@ ul {
     text-align: left;
     max-width: 300px;
     margin: 0 auto;
+    transition: all 0.3s ease-in-out; 
 }
 
 li {
@@ -28,12 +29,16 @@ li {
     border: 1px solid #ddd;
     padding: 0.8rem;
     border-radius: 8px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: slide-in 0.5s forwards;
 }
 
-li:hover {
-    background-color: #f9f9f9;
-    transform: translateY(-2px);
+@keyframes slide-in {
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .input-form {
@@ -45,11 +50,20 @@ li:hover {
     border-radius: 0.25rem;
     margin: 0.5rem 0;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    animation: bounceIn 0.6s ease;
 }
 
 .input-form:focus {
     border-color: #45a049;
     box-shadow: 0 0 8px rgba(72, 169, 72, 0.7);
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out;
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
 }
 
 .btn {
@@ -62,11 +76,19 @@ li:hover {
     border-radius: 5px;
     margin-top: 1rem;
     transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .btn:hover {
     background-color: #45a049;
-    transform: scale(1.05);
+    transform: scale(1.05); 
+    animation: pulse 0.5s infinite; 
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
 }
 
 #notificacion {
@@ -79,6 +101,18 @@ li:hover {
     max-width: 500px;
     margin: 1rem auto;
     text-align: center;
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 #resultadoBusqueda {

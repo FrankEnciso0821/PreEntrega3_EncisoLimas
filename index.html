@@ -5,21 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simulador de Inscripción en Cursos</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 </head>
 <body>
     <h1>Simulador de Inscripción en Cursos</h1>
-    <section id="cursosDisponibles">
+    <section id="cursosDisponibles" data-aos="fade-left">
         <h2>Cursos Disponibles</h2>
-        <ul id="listaCursos">
-        </ul>
+        <ul id="listaCursos"></ul>
     </section>
-    <section id="formInscripcion">
+    <section id="formInscripcion" data-aos="fade-right">
         <h2>Formulario de Inscripción</h2>
-        <div class="form-group">
+        <div class="form-group" data-aos="zoom-in">
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" placeholder="Tu nombre" class="input-form">
         </div>
-        <div class="form-group">
+        <div class="form-group" data-aos="zoom-in">
             <label for="curso">Seleccionar curso:</label>
             <select id="curso" class="input-form">
                 <option value="" disabled selected>Seleccionar curso</option>
@@ -45,5 +47,11 @@
         <div id="resultadoBusqueda"></div>
     </section>
     <script src="inscripciones.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, 
+            once: true, 
+        });
+    </script>
 </body>
 </html>
